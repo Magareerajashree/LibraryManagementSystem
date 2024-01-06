@@ -1,67 +1,50 @@
-package libraryManagementSystem;
+package day4;
 
 public class Book {
+private int bookid;
+private String title;
+private String authorName;
+private String genre;
+public Book()
+{
 	
-		private String title;
-		private int id;
-		private int cost;
-		private String Author;
-		private int noOfPage;
-	 public Book()
-	 {
-		 
-	 }
-	public Book(String title, int id, int cost, String author, int noOfPage) {
-		
-		this.title = title;
-		this.id = id;
-		this.cost = cost;
-		Author = author;
-		this.noOfPage = noOfPage;
-	}
-	public String getTitle() {
-		return title;
-	}
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public int getCost() {
-		return cost;
-	}
-	public void setCost(int cost) {
-		this.cost = cost;
-	}
-	public String getAuthor() {
-		return Author;
-	}
-	public void setAuthor(String author) {
-		Author = author;
-	}
-	public int getNoOfPage() {
-		return noOfPage;
-	}
-	public void setNoOfPage(int noOfPage) {
-		this.noOfPage = noOfPage;
-	}
-	 public void bookDetails()
-	 {
-		 System.out.println("title of the Book:"+getTitle());
-		 System.out.println("id of the Book:"+getId());
-		 System.out.println("cost of the Book:"+getCost());
-		 System.out.println("author of the Book:"+getAuthor());
-		 System.out.println("NoOfPage in the Book:"+getNoOfPage());
-	 }
-	@Override
-	public String toString() {
-		return "Book [title=" + title + ", id=" + id + ", cost=" + cost + ", Author=" + Author + ", noOfPage=" + noOfPage
-				+"]";
-	}
-	}
+}
+public Book(int bookid,String title, String authorName, String genre) {
+    this.bookid=bookid;
+	this.title = title;
+	this.authorName = authorName;
+	this.genre = genre;
+	System.out.println("Book added successfully");
+	System.out.println("----------------------------------");
+}
 
+public int getBookid() {
+	return bookid;
+}
+public void setBookid(int bookid) {
+	this.bookid = bookid;
+}
+public String getTitle() {
+	return title;
+}
+public void setTitle(String title) {
+	this.title = title;
+}
+public String getAuthorName() {
+	return authorName;
+}
+public void setAuthorName(String authorName) {
+	this.authorName = authorName;
+}
+public String getGenre() {
+	return genre;
+}
+public void setGenre(String genre) {
+	this.genre = genre;
+}
+@Override
+public String toString() {
+	return "\n Book Id: "+bookid+"\n Book Title: " + title + "\n Book authorName: " + authorName + "\n Book genre: " + genre ;
+}
 
+}
